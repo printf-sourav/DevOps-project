@@ -1,0 +1,5 @@
+---
+app_port: 8081
+app_directory: /opt/quote-api
+app_user: quote-api
+app_jar: "{{ playbook_dir }}/../target/quote-api.jar"
