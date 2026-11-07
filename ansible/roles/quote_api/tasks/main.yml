@@ -1,0 +1,57 @@
+---
+- name: Install the Java runtime
+  ansible.builtin.apt:
+    name: openjdk-17-jre-headless
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Create a service account
+  ansible.builtin.user:
+    name: "{{ app_user }}"
+    system: true
+    shell: /usr/sbin/nologin
+    create_home: false
+
+- name: Create the application directory
+  ansible.builtin.file:
+    path: "{{ app_directory }}"
+    state: directory
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
+    mode: '0755'
+
+- name: Copy the built application
+  ansible.builtin.copy:
+    src: "{{ app_jar }}"
+    dest: "{{ app_directory }}/quote-api.jar"
+    owner: "{{ app_user }}"
+    group: "{{ app_user }}"
+    mode: '0644'
+  notify: Restart quote API
+
+- name: Install the service definition
+  ansible.builtin.template:
+    src: quote-api.service.j2
+    dest: /etc/systemd/system/quote-api.service
+    mode: '0644'
+  notify: Restart quote API
+
+- name: Apply pending service changes
+  ansible.builtin.meta: flush_handlers
+
+- name: Enable and start the service
+  ansible.builtin.systemd_service:
+    name: quote-api
+    enabled: true
+    state: started
+    daemon_reload: true
+
+- name: Wait for the API to become healthy
+  ansible.builtin.uri:
+    url: "http://127.0.0.1:{{ app_port }}/health"
+    return_content: true
+  register: health
+  until: health.status == 200 and health.json.status == 'UP'
+  retries: 20
+  delay: 3
