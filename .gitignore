@@ -1,0 +1,11 @@
+target/
+.tools/
+tmp/
+.idea/
+.vscode/
+*.log
+.env
+*.pem
+*.key
+ansible/inventory.local
+reports/evidence/raw/
