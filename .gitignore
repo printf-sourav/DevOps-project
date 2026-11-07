@@ -9,3 +9,4 @@ tmp/
 *.key
 ansible/inventory.local
 reports/evidence/raw/
+submission/
