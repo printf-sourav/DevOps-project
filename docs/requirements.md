@@ -24,13 +24,13 @@ Source: the five-page DevOps assignment for course 25CIAEC59 / 25CYAEC59.
 | Reach app through Service | Port-forward Service to localhost:8083, then curl |
 | Scale 3 -> 5 -> 3 | `scripts/scale-demo.sh`, waits for each rollout |
 | Deployment enhancement | Startup, readiness and liveness HTTP probes on `/health` |
-| Separate reports for both components | `reports/component-1.md`, `reports/component-2.md` and their PDFs |
-| Required report sections | Cover, draft certificate, Abstract, Introduction, Implementation, Enhancement, Results, Conclusion, References |
+| Reports for both components | Combined institutional PDF `reports/CY_devops_report_Sourav_Kumar_Sahu.pdf`, with separate component sections; earlier standalone write-ups are retained |
+| Required report sections | Original cover and certificate, component list, rubric and blank marks tables, Abstract, Introduction, Implementation, Enhancement, Description of the Activity, Results, Conclusion, References |
 | Screenshots and recorded outputs | `reports/evidence/`; the reports identify the evidence and its capture status |
 | Source code folder | This repository contains all application, test, pipeline and deployment source |
 | Repository link inside reports and text file | Included in both reports and `repo_link.txt` |
 | Coordinator collaborator | Pending coordinator's GitHub username; invite through repository Settings |
-| Official cover/certificate format | Pending the separate institutional template; draft certificate is unsigned |
+| Official cover/certificate format | Supplied template preserved in `reports/overleaf/main.tex`, personalized with the student's USN/name; signatures and evaluator marks remain blank |
 | One resume line per component | Included in each report; use after the demonstrated stages are complete |
 
 Only one CI enhancement and one deployment enhancement are required. This project chooses automated tests and health probes. It does not add a second microservice, database, paid cloud infrastructure or autoscaling.

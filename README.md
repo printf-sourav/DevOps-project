@@ -30,4 +30,6 @@ The app uses Java 17, Spring Boot and an in-memory list. It has no database or f
 - **Component 1:** Maven build, Jenkins SCM polling, JUnit test stage and archived JAR.
 - **Component 2:** Ansible role with variables and restart handler, Docker image, Kubernetes Deployment and Service, manual scaling and health probes.
 
-Follow [the setup and demo guide](docs/setup.md) for Jenkins, Ansible, Docker and Kubernetes commands. See [the requirements checklist](docs/requirements.md) for coverage and [the reports](reports/) for the two component write-ups and evidence.
+Follow [the setup and demo guide](docs/setup.md) for Jenkins, Ansible, Docker and Kubernetes commands. See [the requirements checklist](docs/requirements.md) for coverage.
+
+The completed [institutional report](reports/CY_devops_report_Sourav_Kumar_Sahu.pdf) includes both components in the supplied college format, with the actual code and evidence. Its editable [LaTeX source](reports/overleaf/main.tex) is ready for Overleaf. Signatures and evaluator marks remain blank.
