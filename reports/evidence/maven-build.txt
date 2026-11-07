@@ -1,0 +1,67 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< io.github.printfsourav:quote-api >------------------
+[INFO] Building Quote API 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ quote-api ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ quote-api ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ quote-api ---
+[INFO] skip non existing resourceDirectory C:\Users\soura\OneDrive\Documents\projects\Devops\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ quote-api ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ quote-api ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running io.github.printfsourav.quotes.QuoteControllerTest
+22:16:50.212 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.github.printfsourav.quotes.QuoteControllerTest]: QuoteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:16:50.532 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.github.printfsourav.quotes.QuoteApplication for test class io.github.printfsourav.quotes.QuoteControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-11-07T22:16:51.116+05:30  INFO 54760 --- [quote-api] [           main] i.g.p.quotes.QuoteControllerTest         : Starting QuoteControllerTest using Java 17.0.20 with PID 54760 (started by soura in C:\Users\soura\OneDrive\Documents\projects\Devops)
+2026-11-07T22:16:51.119+05:30  INFO 54760 --- [quote-api] [           main] i.g.p.quotes.QuoteControllerTest         : No active profile set, falling back to 1 default profile: "default"
+2026-11-07T22:16:52.316+05:30  INFO 54760 --- [quote-api] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-07T22:16:52.317+05:30  INFO 54760 --- [quote-api] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-07T22:16:52.321+05:30  INFO 54760 --- [quote-api] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-07T22:16:52.358+05:30  INFO 54760 --- [quote-api] [           main] i.g.p.quotes.QuoteControllerTest         : Started QuoteControllerTest in 1.728 seconds (process running for 3.029)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.747 s -- in io.github.printfsourav.quotes.QuoteControllerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ quote-api ---
+[INFO] Building jar: C:\Users\soura\OneDrive\Documents\projects\Devops\target\quote-api.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.16:repackage (repackage) @ quote-api ---
+[INFO] Replacing main artifact C:\Users\soura\OneDrive\Documents\projects\Devops\target\quote-api.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\soura\OneDrive\Documents\projects\Devops\target\quote-api.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.771 s
+[INFO] Finished at: 2026-11-07T22:16:55+05:30
+[INFO] ------------------------------------------------------------------------

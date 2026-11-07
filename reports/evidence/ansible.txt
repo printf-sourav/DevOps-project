@@ -1,0 +1,70 @@
+
+PLAY [Configure the Quote API server] ******************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [quote_api : Install the Java runtime] ************************************
+ok: [localhost]
+
+TASK [quote_api : Create a service account] ************************************
+ok: [localhost]
+
+TASK [quote_api : Create the application directory] ****************************
+ok: [localhost]
+
+TASK [quote_api : Copy the built application] **********************************
+changed: [localhost]
+
+TASK [quote_api : Install the service definition] ******************************
+ok: [localhost]
+
+TASK [quote_api : Apply pending service changes] *******************************
+
+RUNNING HANDLER [quote_api : Restart quote API] ********************************
+changed: [localhost]
+
+TASK [quote_api : Enable and start the service] ********************************
+ok: [localhost]
+
+TASK [quote_api : Wait for the API to become healthy] **************************
+FAILED - RETRYING: [localhost]: Wait for the API to become healthy (20 retries left).
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Configure the Quote API server] ******************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/usr/bin/python3.14', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.20/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [quote_api : Install the Java runtime] ************************************
+ok: [localhost]
+
+TASK [quote_api : Create a service account] ************************************
+ok: [localhost]
+
+TASK [quote_api : Create the application directory] ****************************
+ok: [localhost]
+
+TASK [quote_api : Copy the built application] **********************************
+ok: [localhost]
+
+TASK [quote_api : Install the service definition] ******************************
+ok: [localhost]
+
+TASK [quote_api : Apply pending service changes] *******************************
+
+TASK [quote_api : Enable and start the service] ********************************
+ok: [localhost]
+
+TASK [quote_api : Wait for the API to become healthy] **************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,14 @@
+* 1f92323 Document setup and map each assignment requirement
+*   1956418 Merge the quote API and its build and deployment pipeline
+|\  
+| * be6ed8b Keep the Java 17 app on the current Spring Boot patch
+| * bdef930 Run the API on Kubernetes with scaling and health checks
+| * 9d65d3d Set up the API as a Linux service with Ansible
+| * 3c8c220 Have Jenkins test each change before archiving the JAR
+| * 39fec6b Add a quote API with three endpoints and tests
+|/  
+* 033359e Start the DevOps assignment with a small quote API
+  feature/quote-pipeline
+* main
+  remotes/origin/feature/quote-pipeline
+  remotes/origin/main

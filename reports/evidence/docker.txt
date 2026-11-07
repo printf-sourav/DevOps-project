@@ -1,0 +1,31 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  21.18MB
+
+Step 1/6 : FROM eclipse-temurin:17-jre-jammy
+ ---> 2a9eb226abb6
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 2a3f4b699abd
+Step 3/6 : COPY --chown=10001:10001 target/quote-api.jar app.jar
+ ---> b8d378c10ef4
+Step 4/6 : USER 10001:10001
+ ---> Running in ea5933e778b7
+ ---> Removed intermediate container ea5933e778b7
+ ---> d5361c7338a1
+Step 5/6 : EXPOSE 8080
+ ---> Running in 10d7a69d3ade
+ ---> Removed intermediate container 10d7a69d3ade
+ ---> b8b1a4654843
+Step 6/6 : ENTRYPOINT ["java", "-XX:MaxRAMPercentage=75.0", "-jar", "app.jar"]
+ ---> Running in 97a147f1a6e5
+ ---> Removed intermediate container 97a147f1a6e5
+ ---> 8d04ef2ce69a
+Successfully built 8d04ef2ce69a
+Successfully tagged quote-api:1.0
+a65d131721a38122bee18768f63731c59650d6495eafa24df6bedabb34b3217e
+curl: (56) Recv failure: Connection reset by peer
+curl: (56) Recv failure: Connection reset by peer
+{"status":"UP"}{"status":"UP"}{"id":1,"text":"Start small. Keep improving."}

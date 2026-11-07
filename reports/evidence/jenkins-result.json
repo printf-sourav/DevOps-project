@@ -1,0 +1,108 @@
+{
+  "number": 3,
+  "result": "SUCCESS",
+  "building": false,
+  "timestamp": 1794070571743,
+  "duration": 71841,
+  "causes": [
+    [
+      {
+        "_class": "hudson.triggers.SCMTrigger$SCMTriggerCause",
+        "shortDescription": "Started by an SCM change"
+      }
+    ]
+  ],
+  "artifacts": [
+    {
+      "displayPath": "quote-api.jar",
+      "fileName": "quote-api.jar",
+      "relativePath": "target/quote-api.jar"
+    }
+  ],
+  "tests": {
+    "_class": "hudson.tasks.junit.TestResult",
+    "testActions": [],
+    "duration": 8.614,
+    "empty": false,
+    "failCount": 0,
+    "passCount": 3,
+    "skipCount": 0,
+    "suites": [
+      {
+        "cases": [
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "io.github.printfsourav.quotes.QuoteControllerTest",
+            "duration": 3.197,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "healthEndpointIsReadyForProbes",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "skippedSince": 0,
+            "status": "PASSED",
+            "stderr": "Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3\nWARNING: A Java agent has been loaded dynamically (/mnt/c/Users/soura/OneDrive/Documents/projects/Devops/.tools/m2/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)\nWARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning\nWARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information\nWARNING: Dynamic loading of agents will be disallowed by default in a future release\n",
+            "stdout": "16:56:54.025 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.github.printfsourav.quotes.QuoteControllerTest]: QuoteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n16:56:54.394 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.github.printfsourav.quotes.Q\n...[truncated 953 chars]...\nng TestDispatcherServlet ''\n2026-11-07T16:56:58.584Z  INFO 13273 --- [quote-api] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''\n2026-11-07T16:56:58.588Z  INFO 13273 --- [quote-api] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms\n2026-11-07T16:56:58.645Z  INFO 13273 --- [quote-api] [           main] i.g.p.quotes.QuoteControllerTest         : Started QuoteControllerTest in 4.068 seconds (process running for 7.437)\n"
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "io.github.printfsourav.quotes.QuoteControllerTest",
+            "duration": 0.085,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "listsTheThreeQuotes",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "skippedSince": 0,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          },
+          {
+            "testActions": [],
+            "age": 0,
+            "className": "io.github.printfsourav.quotes.QuoteControllerTest",
+            "duration": 0.201,
+            "errorDetails": null,
+            "errorStackTrace": null,
+            "failedSince": 0,
+            "flakyFailures": [],
+            "name": "randomQuoteBelongsToTheList",
+            "properties": {},
+            "rerunFailures": [],
+            "skipped": false,
+            "skippedMessage": null,
+            "skippedSince": 0,
+            "status": "PASSED",
+            "stderr": null,
+            "stdout": null
+          }
+        ],
+        "duration": 8.614,
+        "enclosingBlockNames": [
+          "Test"
+        ],
+        "enclosingBlocks": [
+          "15"
+        ],
+        "id": null,
+        "name": "io.github.printfsourav.quotes.QuoteControllerTest",
+        "nodeId": "22",
+        "properties": {},
+        "stderr": null,
+        "stdout": null,
+        "timestamp": null
+      }
+    ]
+  }
+}

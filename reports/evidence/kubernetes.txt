@@ -1,0 +1,52 @@
+Image: "quote-api:1.0" with ID "sha256:8d04ef2ce69af3fcadf55b020d86a76b88acb2d8b4a06bf711bff02dbece8bba" not yet present on node "quote-demo-control-plane", loading...
+deployment.apps/quote-api restarted
+Waiting for deployment "quote-api" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "quote-api" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "quote-api" rollout to finish: 1 out of 3 new replicas have been updated...
+Waiting for deployment "quote-api" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "quote-api" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "quote-api" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "quote-api" rollout to finish: 2 out of 3 new replicas have been updated...
+Waiting for deployment "quote-api" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "quote-api" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "quote-api" rollout to finish: 1 old replicas are pending termination...
+deployment "quote-api" successfully rolled out
+Scaling quote-api to 3 replicas
+deployment.apps/quote-api scaled
+deployment "quote-api" successfully rolled out
+deployment.apps/quote-api condition met
+NAME                         READY   STATUS    RESTARTS   AGE
+quote-api-5f98586967-dwz96   1/1     Running   0          37s
+quote-api-5f98586967-hlg29   1/1     Running   0          21s
+quote-api-5f98586967-jlnck   1/1     Running   0          53s
+Scaling quote-api to 5 replicas
+deployment.apps/quote-api scaled
+Waiting for deployment "quote-api" rollout to finish: 3 of 5 updated replicas are available...
+Waiting for deployment "quote-api" rollout to finish: 4 of 5 updated replicas are available...
+deployment "quote-api" successfully rolled out
+deployment.apps/quote-api condition met
+NAME                         READY   STATUS    RESTARTS   AGE
+quote-api-5f98586967-cd7wz   1/1     Running   0          29s
+quote-api-5f98586967-dwz96   1/1     Running   0          67s
+quote-api-5f98586967-gdgsp   1/1     Running   0          29s
+quote-api-5f98586967-hlg29   1/1     Running   0          51s
+quote-api-5f98586967-jlnck   1/1     Running   0          83s
+Scaling quote-api to 3 replicas
+deployment.apps/quote-api scaled
+deployment "quote-api" successfully rolled out
+deployment.apps/quote-api condition met
+NAME                         READY   STATUS    RESTARTS   AGE
+quote-api-5f98586967-dwz96   1/1     Running   0          70s
+quote-api-5f98586967-hlg29   1/1     Running   0          54s
+quote-api-5f98586967-jlnck   1/1     Running   0          86s
+NAME        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+quote-api   ClusterIP   10.96.203.204   <none>        8080/TCP   4m1s
+
+GET /health through the Kubernetes Service
+{"status":"UP"}
+GET /quotes through the Kubernetes Service
+[{"id":1,"text":"Start small. Keep improving."},{"id":2,"text":"Build it, test it, then ship it."},{"id":3,"text":"A little progress every day adds up."}]
+Health probes configured in the Deployment
+{"failureThreshold":30,"httpGet":{"path":"/health","port":"http","scheme":"HTTP"},"periodSeconds":5,"successThreshold":1,"timeoutSeconds":1}
+{"failureThreshold":3,"httpGet":{"path":"/health","port":"http","scheme":"HTTP"},"periodSeconds":5,"successThreshold":1,"timeoutSeconds":1}
+{"failureThreshold":3,"httpGet":{"path":"/health","port":"http","scheme":"HTTP"},"periodSeconds":10,"successThreshold":1,"timeoutSeconds":1}
