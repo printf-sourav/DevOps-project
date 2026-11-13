@@ -24,6 +24,7 @@ Source: the five-page DevOps assignment for course 25CIAEC59 / 25CYAEC59.
 | Reach app through Service | Port-forward Service to localhost:8083, then curl |
 | Scale 3 -> 5 -> 3 | `scripts/scale-demo.sh`, waits for each rollout |
 | Deployment enhancement | Startup, readiness and liveness HTTP probes on `/health` |
+| ConfigMap evidence from the screenshot checklist | `k8s/configmap.yaml` supplies `APP_PORT=8080` through the Deployment's `envFrom`; verified in the running container |
 | Reports for both components | Combined institutional PDF `reports/CY_devops_report_Sourav_Kumar_Sahu.pdf`, with separate component sections; earlier standalone write-ups are retained |
 | Required report sections | Original cover and certificate, component list, rubric and blank marks tables, Abstract, Introduction, Implementation, Enhancement, Description of the Activity, Results, Conclusion, References |
 | Screenshots and recorded outputs | `reports/evidence/`; the reports identify the evidence and its capture status |

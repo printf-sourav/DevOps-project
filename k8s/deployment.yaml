@@ -20,6 +20,9 @@ spec:
         - name: quote-api
           image: quote-api:1.0
           imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: quote-api-config
           ports:
             - name: http
               containerPort: 8080

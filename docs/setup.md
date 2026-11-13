@@ -115,6 +115,8 @@ kubectl --context kind-quote-demo describe deployment quote-api
 
 The Deployment starts with three replicas. The scale script shows three, then five, then three replicas and waits for each rollout. The ClusterIP Service selects `app: quote-api` and routes port 8080 to the named container port `http`. Port forwarding makes that service reachable locally. Startup, readiness and liveness probes request `/health`; readiness controls traffic and liveness restarts an unhealthy container.
 
+`k8s/configmap.yaml` supplies `APP_PORT=8080` to the container through `envFrom`. The ConfigMap was added for the screenshot checklist, alongside the existing health probes. Keep the configured port aligned with the container and Service ports.
+
 After rebuilding the same image tag, reload it and restart the deployment so running pods use the new image:
 
 ```sh

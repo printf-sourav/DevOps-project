@@ -28,7 +28,7 @@ The app uses Java 17, Spring Boot and an in-memory list. It has no database or f
 `Git -> Jenkins tests -> Maven JAR -> Ansible service / Docker -> Kubernetes -> scale 3 to 5 to 3`
 
 - **Component 1:** Maven build, Jenkins SCM polling, JUnit test stage and archived JAR.
-- **Component 2:** Ansible role with variables and restart handler, Docker image, Kubernetes Deployment and Service, manual scaling and health probes.
+- **Component 2:** Ansible role with variables and restart handler, Docker image, Kubernetes Deployment and Service, manual scaling, health probes and ConfigMap settings.
 
 Follow [the setup and demo guide](docs/setup.md) for Jenkins, Ansible, Docker and Kubernetes commands. See [the requirements checklist](docs/requirements.md) for coverage.
 
