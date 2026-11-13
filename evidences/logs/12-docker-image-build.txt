@@ -1,0 +1,30 @@
+Captured: 2026-11-13T23:06:54+05:30
+
+Command: docker build -t quote-api:1.0 .
+
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  21.18MB
+Step 1/6 : FROM eclipse-temurin:17-jre-jammy
+ ---> 2a9eb226abb6
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 2a3f4b699abd
+Step 3/6 : COPY --chown=10001:10001 target/quote-api.jar app.jar
+ ---> 780b6a17ff0a
+Step 4/6 : USER 10001:10001
+ ---> Running in fd7c8e3c5632
+ ---> Removed intermediate container fd7c8e3c5632
+ ---> ba0def4b30af
+Step 5/6 : EXPOSE 8080
+ ---> Running in 61372bff0a43
+ ---> Removed intermediate container 61372bff0a43
+ ---> d8158c978afe
+Step 6/6 : ENTRYPOINT ["java", "-XX:MaxRAMPercentage=75.0", "-jar", "app.jar"]
+ ---> Running in 7983180a996c
+ ---> Removed intermediate container 7983180a996c
+ ---> 0226abbad9a2
+Successfully built 0226abbad9a2
+Successfully tagged quote-api:1.0

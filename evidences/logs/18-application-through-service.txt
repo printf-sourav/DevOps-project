@@ -1,0 +1,11 @@
+Captured: 2026-11-13T23:08:16+05:30
+
+Service access: kubectl --context kind-quote-demo port-forward service/quote-api 8083:8080
+
+Command: curl http://127.0.0.1:8083/health
+
+{"status":"UP"}
+
+Command: curl http://127.0.0.1:8083/quotes
+
+[{"id":1,"text":"Start small. Keep improving."},{"id":2,"text":"Build it, test it, then ship it."},{"id":3,"text":"A little progress every day adds up."}]

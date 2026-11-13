@@ -1,0 +1,10 @@
+Captured: 2026-11-13T23:07:06+05:30
+
+Command: docker ps --filter name=quote-api-evidence
+
+CONTAINER ID   IMAGE           COMMAND                  CREATED         STATUS         PORTS                      NAMES
+1516bfe7343f   quote-api:1.0   "java -XX:MaxRAMPerc…"   5 seconds ago   Up 4 seconds   127.0.0.1:8082->8080/tcp   quote-api-evidence
+
+Command: curl http://127.0.0.1:8082/health
+
+{"status":"UP"}

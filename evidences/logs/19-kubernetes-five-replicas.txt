@@ -1,0 +1,17 @@
+Captured: 2026-11-13T23:08:16+05:30
+
+Command: kubectl --context kind-quote-demo scale deployment/quote-api --replicas=5
+
+deployment.apps/quote-api scaled
+Waiting for deployment "quote-api" rollout to finish: 3 of 5 updated replicas are available...
+Waiting for deployment "quote-api" rollout to finish: 4 of 5 updated replicas are available...
+deployment "quote-api" successfully rolled out
+
+Command: kubectl --context kind-quote-demo get pods -l app=quote-api
+
+NAME                         READY   STATUS    RESTARTS   AGE
+quote-api-6576c9cdb6-c9nkg   1/1     Running   0          41s
+quote-api-6576c9cdb6-mwdww   1/1     Running   0          73s
+quote-api-6576c9cdb6-v69jr   1/1     Running   0          58s
+quote-api-6576c9cdb6-xhsbs   1/1     Running   0          16s
+quote-api-6576c9cdb6-znqcs   1/1     Running   0          16s

@@ -1,0 +1,6 @@
+Captured: 2026-11-13T23:11:44+05:30
+
+Command: kubectl --context kind-quote-demo get nodes
+
+NAME                       STATUS   ROLES           AGE   VERSION
+quote-demo-control-plane   Ready    control-plane   6d    v1.35.0

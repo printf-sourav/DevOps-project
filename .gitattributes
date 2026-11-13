@@ -1,5 +1,7 @@
 * text=auto eol=lf
 *.pdf binary
 *.png binary
+*.jpg binary
 *.md whitespace=-blank-at-eol
 reports/evidence/*.txt whitespace=-blank-at-eol
+evidences/logs/*.txt whitespace=-blank-at-eol

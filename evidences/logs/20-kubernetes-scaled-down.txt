@@ -1,0 +1,16 @@
+Captured: 2026-11-13T23:11:42+05:30
+
+Final state after scaling deployment/quote-api from five replicas back to three.
+The original scale operation is retained in 20-scale-down-transition.txt.
+
+Command: kubectl --context kind-quote-demo get deployment quote-api
+
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+quote-api   3/3     3            3           6d
+
+Command: kubectl --context kind-quote-demo get pods -l app=quote-api
+
+NAME                         READY   STATUS    RESTARTS   AGE
+quote-api-6576c9cdb6-c9nkg   1/1     Running   0          3m53s
+quote-api-6576c9cdb6-mwdww   1/1     Running   0          4m25s
+quote-api-6576c9cdb6-v69jr   1/1     Running   0          4m10s

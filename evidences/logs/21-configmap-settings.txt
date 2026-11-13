@@ -1,0 +1,36 @@
+Captured: 2026-11-13T23:08:34+05:30
+
+File: k8s/configmap.yaml
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: quote-api-config
+data:
+  APP_PORT: "8080"
+
+Command: kubectl --context kind-quote-demo get configmaps
+
+NAME               DATA   AGE
+kube-root-ca.crt   1      6d
+quote-api-config   1      75s
+
+Command: kubectl --context kind-quote-demo get configmap quote-api-config -o yaml
+
+apiVersion: v1
+data:
+  APP_PORT: "8080"
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"APP_PORT":"8080"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"quote-api-config","namespace":"default"}}
+  creationTimestamp: "2026-11-13T17:37:19Z"
+  name: quote-api-config
+  namespace: default
+  resourceVersion: "24853"
+  uid: e135eeb1-35c2-43fd-8898-f61daa7e1e29
+
+Command: kubectl --context kind-quote-demo exec deployment/quote-api -- printenv APP_PORT
+
+8080

@@ -1,0 +1,30 @@
+{
+  "number": 6,
+  "result": "SUCCESS",
+  "timestamp": 1794591611554,
+  "duration": 82152,
+  "artifacts": [
+    {
+      "displayPath": "quote-api.jar",
+      "fileName": "quote-api.jar",
+      "relativePath": "target/quote-api.jar"
+    }
+  ],
+  "causes": [
+    [
+      {
+        "_class": "hudson.triggers.SCMTrigger$SCMTriggerCause",
+        "shortDescription": "Started by an SCM change"
+      }
+    ]
+  ],
+  "revision": [
+    "7568c28c6072e80679c005c64316adee0f10b794"
+  ],
+  "tests": {
+    "passCount": 3,
+    "failCount": 0,
+    "skipCount": 0,
+    "duration": 6.671
+  }
+}

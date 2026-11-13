@@ -1,0 +1,21 @@
+Captured: 2026-11-13T23:06:14+05:30
+
+File: ansible/inventory
+
+[app_servers]
+localhost ansible_connection=local
+
+File: ansible/playbook.yml
+
+---
+- name: Configure the Quote API server
+  hosts: app_servers
+  become: true
+  roles:
+    - quote_api
+
+Role: ansible/roles/quote_api
+ansible/roles/quote_api/defaults/main.yml
+ansible/roles/quote_api/handlers/main.yml
+ansible/roles/quote_api/tasks/main.yml
+ansible/roles/quote_api/templates/quote-api.service.j2

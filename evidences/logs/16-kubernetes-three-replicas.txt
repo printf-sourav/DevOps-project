@@ -1,0 +1,8 @@
+Captured: 2026-11-13T23:08:08+05:30
+
+Command: kubectl --context kind-quote-demo get pods -l app=quote-api
+
+NAME                         READY   STATUS    RESTARTS   AGE
+quote-api-6576c9cdb6-c9nkg   1/1     Running   0          20s
+quote-api-6576c9cdb6-mwdww   1/1     Running   0          52s
+quote-api-6576c9cdb6-v69jr   1/1     Running   0          37s

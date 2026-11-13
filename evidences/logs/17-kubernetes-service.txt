@@ -1,0 +1,6 @@
+Captured: 2026-11-13T23:08:11+05:30
+
+Command: kubectl --context kind-quote-demo get svc quote-api
+
+NAME        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+quote-api   ClusterIP   10.96.203.204   <none>        8080/TCP   6d
