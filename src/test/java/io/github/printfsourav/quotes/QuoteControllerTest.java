@@ -22,6 +22,9 @@ class QuoteControllerTest {
         mvc.perform(get("/quotes"))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$", hasSize(3)))
+            .andExpect(jsonPath("$[0].id").value(1))
+            .andExpect(jsonPath("$[1].id").value(2))
+            .andExpect(jsonPath("$[2].id").value(3))
             .andExpect(jsonPath("$[0].text").value("Start small. Keep improving."));
     }
 
