@@ -517,46 +517,59 @@ To check that the tests could catch a regression, the health status was temporar
 The local build reported three tests with zero failures, errors or skipped tests. The automatically triggered Jenkins run completed with SUCCESS and provided the archived JAR. The figures below combine direct Jenkins browser screenshots with clearly labelled renderings of actual recorded command output; the original logs are stored in the repository's \texttt{reports/evidence} directory.
 
 \clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{git-history.png}
-\end{center}
-\noindent Git history: main and feature/quote-pipeline are retained, and the merge commit is visible.
+\noindent\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{git-history.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Git history: main and feature/quote-pipeline are retained, and the merge commit is visible.\par
+\par\vspace{1em}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{maven-build.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Local Maven result: all three tests passed and the executable JAR was packaged successfully.\par
+\end{minipage}
 
 \clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{maven-build.png}
-\end{center}
-\noindent Local Maven result: all three tests passed and the executable JAR was packaged successfully.
+\noindent\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{jenkins-config.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Jenkins SCM configuration: the Pipeline job reads from the actual project repository.\par
+\par\vspace{1em}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{jenkins-trigger.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Jenkins trigger: Poll SCM is enabled with a one-minute schedule.\par
+\end{minipage}
 
 \clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{jenkins-config.png}
-\end{center}
-\noindent Jenkins SCM configuration: the Pipeline job reads from the actual project repository.
+\noindent\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{jenkins-build.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Jenkins build \#3: SUCCESS, an SCM-change cause, no test failures and the archived quote-api.jar artifact.\par
+\par\vspace{1em}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{jenkins-console.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Jenkins console: Maven BUILD SUCCESS is followed by artifact archiving and fingerprint recording.\par
+\end{minipage}
 
 \clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{jenkins-trigger.png}
-\end{center}
-\noindent Jenkins trigger: Poll SCM is enabled with a one-minute schedule.
-
-\clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{jenkins-build.png}
-\end{center}
-\noindent Jenkins build \#3: SUCCESS, an SCM-change cause, no test failures and the archived quote-api.jar artifact.
-
-\clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{jenkins-console.png}
-\end{center}
-\noindent Jenkins console: Maven BUILD SUCCESS is followed by artifact archiving and fingerprint recording.
-
-\clearpage
-\begin{center}
+\noindent\begin{minipage}{\linewidth}
+\centering
 \includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{jenkins-tests.png}
-\end{center}
-\noindent CI enhancement: Jenkins publishes the three passing JUnit tests.
+\par\vspace{0.5em}
+\raggedright
+\noindent CI enhancement: Jenkins publishes the three passing JUnit tests.\par
+\end{minipage}
+
 
 
 \subsection*{Conclusion}
@@ -872,28 +885,35 @@ The Service kept its ClusterIP while the pod count changed. A request through it
 The playbook had no failed tasks, and the unchanged repeat run made zero changes. The Docker image returned valid JSON. The figures show three to five to three healthy replicas, the running Service, successful HTTP responses and the applied probes.
 
 \clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{ansible.png}
-\end{center}
-\noindent Ansible results: deployment of the final JAR and an unchanged repeat run with zero failures and zero changes.
+\noindent\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{ansible.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Ansible results: deployment of the final JAR and an unchanged repeat run with zero failures and zero changes.\par
+\par\vspace{1em}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{docker.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Docker verification: the image built successfully and returned the health and quote responses.\par
+\end{minipage}
 
 \clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{docker.png}
-\end{center}
-\noindent Docker verification: the image built successfully and returned the health and quote responses.
+\noindent\begin{minipage}{\linewidth}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{kubernetes-scaling.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Scaling evidence: three healthy pods, five healthy pods, and three again; the ClusterIP Service remains available.\par
+\par\vspace{1em}
+\centering
+\includegraphics[width=\linewidth,height=0.34\textheight,keepaspectratio]{kubernetes-health.png}
+\par\vspace{0.5em}
+\raggedright
+\noindent Service and enhancement evidence: successful HTTP responses and the startup, readiness and liveness probes read from the live Deployment.\par
+\end{minipage}
 
-\clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{kubernetes-scaling.png}
-\end{center}
-\noindent Scaling evidence: three healthy pods, five healthy pods, and three again; the ClusterIP Service remains available.
-
-\clearpage
-\begin{center}
-\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{kubernetes-health.png}
-\end{center}
-\noindent Service and enhancement evidence: successful HTTP responses and the startup, readiness and liveness probes read from the live Deployment.
 
 
 \subsection*{Conclusion}

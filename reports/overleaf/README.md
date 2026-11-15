@@ -6,6 +6,8 @@ The student instruction pages and boxes have been removed. Both components conta
 
 The final PDF is [CY_devops_report_Sourav_Kumar_Sahu.pdf](../CY_devops_report_Sourav_Kumar_Sahu.pdf). The earlier standalone component reports are retained as supporting write-ups; this combined report follows the institutional format.
 
+Evidence screenshots are arranged two per page, with the remaining unpaired screenshot on its own page. All report text, code, captions and original images are preserved.
+
 To compile locally with a standard TeX Live installation, run from this directory:
 
 ```sh
