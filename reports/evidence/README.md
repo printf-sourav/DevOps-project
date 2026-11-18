@@ -15,3 +15,5 @@ Captured on 7 November 2026 for Sourav Kumar Sahu, USN 1MS24CY063.
 The command-output PNGs are readable renderings of excerpts from the accompanying real logs. They are labelled as recorded output. The complete text files retain startup retries and build details rather than hiding them. The Jenkins PNGs are direct browser screenshots.
 
 The reports' certificate pages are drafts awaiting the separate institutional template and faculty signatures. No signature or certification has been fabricated.
+
+Figure title, student-name, date and source banners are omitted from the images. The command-output figures are renderings of the stored logs; provenance is recorded in this index.

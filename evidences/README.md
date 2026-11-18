@@ -4,7 +4,7 @@ Captured on 13 November 2026 for Sourav Kumar Sahu, USN 1MS24CY063.
 
 This folder covers every item in the supplied screenshot checklist. The actual project uses **Quote API**, Service **quote-api**, and the **Kind** cluster `quote-demo`. Those names replace the checklist's example `todo-service` and Minikube names.
 
-Screenshots 01-08 show the real GitHub and Jenkins interfaces. Screenshots 09-21 show readable browser views of actual recorded command output, explicitly labelled as recorded output. The full text is included in [logs](logs/) so the images can be checked against the commands and results. The screenshots are not simulated terminal sessions.
+Screenshots 01-08 show the real GitHub and Jenkins interfaces. Screenshots 09-21 are rendered figures of actual recorded command output, with provenance documented in this index. The full text is included in [logs](logs/) so the images can be checked against the commands and results. The screenshots are not simulated terminal sessions.
 
 ![Overview of all 21 screenshots](overview.jpg)
 
@@ -46,3 +46,5 @@ Both Ansible runs finished with `failed=0`; the unchanged repeat run reported `c
 The [ConfigMap](../k8s/configmap.yaml) supplies `APP_PORT=8080` through the Deployment's `envFrom`. Screenshot 21 includes both the applied object and the value read from the running container. The existing health probes remain enabled.
 
 The November 7 report evidence remains under `reports/evidence/`; these numbered captures are the complete November 13 checklist set.
+
+Figure title, student-name, date and source banners are omitted from the images. The command-output figures are renderings of the stored logs; provenance is recorded in this index.
